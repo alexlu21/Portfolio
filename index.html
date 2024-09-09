@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <nav>
+        <ul class="links">
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#about">Conocimientos</a>
+            <a href="#knowledge">Habilidades</a>
+        </ul>
+        <i class='bx bx-menu' id="menu"></i>
+        <a href="#footer" class="btn">Contáctame</a>
+    </nav>
+
+    <section id="inicio">
+        <img src="./imgs/profile.jpg" alt="img1">
+
+        <div class="info-box">
+            <h1><span>Alejandro López</span></h1>
+            <h3>Desarrollador Web</h3>
+            <p>
+                Soy técnico en desarrollo de aplicaciones web y en este portfolio muestro todo mi conocimiento sobre el
+                desarrollo web que tengo. A lo largo de los años que llevo aprendiendo he hecho proyectos los cuales me 
+                han hecho aprender mucho.
+                Este portfolio está hecho con HTML5, CSS3 y JavaScript Vanilla, he decidido no hacerlo con frameworks o
+                o librerias de JavaScript ya que es la base de todo ,y para cambiar ya que he hecho muchos proyectos con
+                estas tecnologías.
+            </p>
+        </div>
+
+        <div class="btn-box">
+            <a href="#footer"><div class="btn">Contáctame</div></a>
+            <div class="btn"><i class='bx bxl-github' onclick="github()"></i></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-box">
+            <div class="about-info">
+                <h1><span>Sobre mí</span></h1>
+                <p>
+                    Soy una persona que le encanta aprender tecnologías a base de hacer proyectos por mi cuenta. En lo que
+                    llevo siendo desarrollador web he aprendido conocimientos tanto de frontend como de backend.
+                    Aqui abajo dejo dos columnas con todos los conocimientos que he aprendido. La columna de la izquierda está
+                    enfocada en tecnologías de frontend y la de la derecha en el backend. 
+                </p>
+            </div>
+
+            <h2><span>Conocimientos</span></h2>
+
+            <div class="skills">
+                <ul>
+                    <li>
+                        <span onclick="redi(`https://flag-countries-game.vercel.app/`)">
+                            <i class='bx bx-chevron-right'></i>
+                            HTML & CSS
+                        </span>
+                    </li>
+                    <li>
+                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                            <i class='bx bx-chevron-right'></i>
+                            REACT
+                        </span>
+                    </li>
+                    <li>
+                        <span onclick="redi(`https://flag-countries-game.vercel.app/`)">
+                            <i class='bx bx-chevron-right'></i>
+                            JavaScript
+                        </span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                            <i class='bx bx-chevron-right'></i>
+                            Java/Spring Boot
+                        </span>
+                    </li>
+                    <li>
+                        <span onclick="redi(`https://github.com/alexlu21/bloguetus`)">
+                            <i class='bx bx-chevron-right'></i>
+                            NODE
+                        </span>
+                    </li>
+                    <li>
+                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                            <i class='bx bx-chevron-right'></i>
+                            MYSQL
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="./imgs/img-about.jpeg" alt="img2">
+    </section>
+
+    <section id="knowledge">
+        <h1 class="header"><span>Habilidades</span></h1>
+
+        <div class="knowledge-container">
+            <div class="box">
+                <h1><span>Desarrollo backend</span></h1>
+                <p>
+                    En el desarrollo de backend tengo experiencia creando, mayormente, modelo vista-controlador(mvc) con frameworks como Spring Boot (Java).
+                    También he creado varios proyectos con Node.Js, aplicando el mvc o con modelo de esquemas que pueden tener algunas BBDD.
+                </p>
+                <img src="./imgs/dev-back.jpg" alt="img3">
+            </div>
+            <div class="box">
+                <h1><span>Desarrollo de frontend</span></h1>
+                <p>
+                    Mi lenguaje para el frontend es JavaScript, y por eso es que mis proyectos la parte del frontend lleva o JavaScript Vanilla o 
+                    frameworks. Los frameworks que mas uso son React y Next.js, ya que el sistema de componenetes me parece muy interesante.
+                </p>
+                <img src="./imgs/dev-front.jpg" alt="img3">
+            </div>
+            <div class="box">
+                <h1><span>Manejo Base de Datos</span></h1>
+                <p>
+                    En cuanto al manejo de BBDD he creado Bases de Datos SQl (PostgreSQL,MySQL...), y también Bases de Datos no relacionales como
+                    puede ser MongoDB. He usado Bases de Datos en la nube como puede ser MongoDB Atlas que ofrece muy buenas pruebas gratuitas
+                </p>
+                <img src="./imgs/dev-bbdd.jpg" alt="img3">
+            </div>
+            
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="col-left">
+            <div class="col-box">
+                <span class="ubi"><i class='bx bx-map' onclick="ubi()"></i></span>
+                <span>A Coruña, Galicia, España</span>
+            </div>
+            <div class="col-box">
+                <span><i class='bx bxs-phone-call' ></i></span>
+                <span>+34 652073003</span>
+            </div>
+            <div class="col-box">
+                <span class="email" onclick="redi(`mailto:alexlugris@gmail.com`)"><i class='bx bxs-envelope' ></i></span>
+                <span>alexlugris@gmail.com</span>
+            </div>
+        </div>
+        <div class="col-right">
+            <span>Sobre mis proyectos</span>
+            <p>
+                Es bastante tiempo que el que le dedico a mis proyectos porque es algo que me gusta y el tiempo se me pasa rápido. Además, en mi opinión,
+                es de las mejores formas de aprender y mejorar a la hora de adquirir conocimientos.
+                <br>
+                Mis proyectos me han hecho aprender mucho más de lo que podía haber aprendido con teoría.
+            </p>
+            <div class="social-icons">
+                <span>
+                    <i class='bx bxl-linkedin-square' onclick="linkedin()"></i>
+                </span>
+                <span>
+                    <i class='bx bxl-github' onclick="github()"></i>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

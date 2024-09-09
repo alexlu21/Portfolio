@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --background: rgb(24, 24, 24);
+    --second-background: rgb(21,21,21);
+}
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+}
+p{
+    font-family: cursive;
+    text-align: justify;
+}
+nav{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15% ; /*El 2em es para el top y bottom, y el 15% para el left y right*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000; /*Para asegurar que el nav está arriba de la página siempre*/
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+nav ul a{
+    font-size: 1.5em;
+    color: white;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 0.8px;
+}
+nav ul a:hover{
+    opacity: 1;
+}
+.btn{
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: 450;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    border: 1.8px solid white;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(250, 250, 220);
+    color: var(--background);
+}
+span{
+    background: linear-gradient(90deg, rgba(0,52,255,1) 0%, rgba(0,255,253,0.6166667350533963) 60%, rgba(0, 46, 212, 0.975) 80%);
+    background-clip: text;
+    color: transparent;
+}
+#menu{
+    display: none;
+    color: white;
+    font-size: 3em;
+}
+section{
+    min-height: 100vh;
+    padding: 5% 15%;
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: white;
+}
+#inicio img{
+    width: 15vw;
+    border-radius: 200px;
+    margin-top: 3em;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px;
+}
+.info-box h1{
+    font-size: 5em;
+    font-weight: 500;
+}
+.info-box h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+.info-box p{
+    opacity: 0.7;
+}
+.btn-box{
+    display: flex;
+    gap: 0.8em;
+}
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: var(--background);
+}
+/*
+::-webkit-scrollbar-thumb{
+    DECIDIR AL FINAL SI PONER AQUI PONER EL BACKGROUND CON EL GRADIENT
+}
+*/
+#about{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+#about img{
+    width: 30vw;
+    border-radius: 14px;
+}
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /*text-align: justify;*/
+    gap: 2em;
+}
+.about-box h1{
+    font-size: 5em;
+}
+.about-box h2{
+    color: white;
+}
+.about-box p{
+    color: white;
+    opacity: 0.8;
+}
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+}
+.skills ul{
+    font-size: 1.3em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: 0.8;
+    align-items: baseline;
+}
+.skills ul li span{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+.skills ul li span:hover{
+    transform: translateX(8px);
+}
+.skills ul li i{
+    font-size: 1.2em;
+}
+.about-box h2{
+    font-size: 2.5em;
+}
+#knowledge{
+    background-color: var(--background);
+}
+.header{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+}
+.knowledge-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 2em;
+}
+.box{
+    border: 3px solid rgb(49, 49, 49);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 3em;
+    gap: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.box:hover{
+    border: 3px solid rgb(100,100,100);
+    background: var(--second-background);
+}
+.box p{
+    opacity: 0.8;
+}
+.box h1{
+    font-size: 2em;
+}
+.box img{
+    min-width: 25px;
+    border-radius: 8px;
+}
+footer{
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    background-color: var(--second-background);
+    width: 100%;
+    padding: 5em 15%;
+}
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.col-box .ubi,.email{
+    cursor: pointer;
+}
+
+.col-box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.col-box i{
+    font-size: 2em;
+}
+.col-box span{
+    font-size: 1.2em;
+}
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    max-width: 500px;
+}
+.col-right span{
+    font-size: 2em;
+}
+.col-right .social-icons{
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    gap: 1em;
+}
+.col-right .social-icons i{
+    font-size: 1.8em;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.social-icons i:hover{
+    color: white;
+}
+
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background:rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+    }
+    .links.active{
+        display: block;
+    }
+    #inicio h1{
+        font-size: 4em;
+    }
+    #inicio h3{
+        font-size: 2em;
+    }
+    #inicio img{
+        width: 24vw;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about img{
+        width: 32vw;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+    #about ul{
+        font-size: 1em;
+    }
+}
+@media(max-width:768px){
+    #inicio h1{
+        font-size: 2.5em;
+    }
+    #inicio h3{
+        font-size: 1.5em;
+    }
+    #inicio img{
+        width: 32vw;
+    }
+    #about .skills{
+        gap: 3em;
+    }
+    #knowledge .header{
+        font-size: 3em;
+    }
+    #contact .input-box span{
+        font-size: 1.2em;
+    }
+    .input-box input{
+        padding: 0.5em 1em;
+    }
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+}
