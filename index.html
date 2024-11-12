@@ -13,7 +13,7 @@
         <ul class="links">
             <a href="#inicio">Inicio</a>
             <a href="#about">Sobre mí</a>
-            <a href="#about">Conocimientos</a>
+            <a href="#projects">Proyectos Personales</a>
             <a href="#knowledge">Habilidades</a>
         </ul>
         <i class='bx bx-menu' id="menu"></i>
@@ -59,19 +59,19 @@
             <div class="skills">
                 <ul>
                     <li>
-                        <span onclick="redi(`https://flag-countries-game.vercel.app/`)">
+                        <span onclick="redi('https://flag-countries-game.vercel.app/')">
                             <i class='bx bx-chevron-right'></i>
                             HTML & CSS
                         </span>
                     </li>
                     <li>
-                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                        <span onclick="redi('https://blog-production-c9f4.up.railway.app/')">
                             <i class='bx bx-chevron-right'></i>
                             REACT
                         </span>
                     </li>
                     <li>
-                        <span onclick="redi(`https://flag-countries-game.vercel.app/`)">
+                        <span onclick="redi('https://flag-countries-game.vercel.app/')">
                             <i class='bx bx-chevron-right'></i>
                             JavaScript
                         </span>
@@ -79,19 +79,19 @@
                 </ul>
                 <ul>
                     <li>
-                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                        <span onclick="redi('https://mls-fc-production.up.railway.app/')">
                             <i class='bx bx-chevron-right'></i>
                             Java/Spring Boot
                         </span>
                     </li>
                     <li>
-                        <span onclick="redi(`https://github.com/alexlu21/bloguetus`)">
+                        <span onclick="redi('https://blog-production-c9f4.up.railway.app/')">
                             <i class='bx bx-chevron-right'></i>
                             NODE
                         </span>
                     </li>
                     <li>
-                        <span onclick="redi(`https://github.com/alexlu21/nutri-boost`)">
+                        <span onclick="redi('https://github.com/alexlu21/nutri-boost/blob/master/nutri_boost_sql_script.sql')">
                             <i class='bx bx-chevron-right'></i>
                             MYSQL
                         </span>
@@ -102,6 +102,30 @@
         <img src="./imgs/img-about.jpeg" alt="img2">
     </section>
 
+    <section id="projects">
+        <div class="header"><span>Mis Proyectos Personales</span></div>
+        <div class="projects-container">
+            <div class="project">
+                <img src="./imgs/blog.png" alt="Proyecto 1">
+                <h2>Blog</h2>
+                <p>Blog para compartir historias de todo tipo con amigos o personas</p>
+                <a class="btn" onclick="redi('https://blog-production-c9f4.up.railway.app/')">Ver Proyecto</a>
+            </div>
+            <div class="project">
+                <img src="./imgs/mlsfc.png" alt="Proyecto 2">
+                <h2>Mls fc</h2>
+                <p>Página basada en una serie de futbol con una api para manejar jugadores</p>
+                <a class="btn" onclick="redi('https://mls-fc-production.up.railway.app/')">Ver Proyecto</a>
+            </div>
+            <div class="project">
+                <img src="./imgs/flasg_game.png" alt="Proyecto 3">
+                <h2>Adivina la bandera</h2>
+                <p>Pequeño juego de adivinar la bandera usando dos APIs (RestCountries y Nasa)</p>
+                <a class="btn" onclick="redi('https://flag-countries-game.vercel.app/')">Ver Proyecto</a>
+            </div>
+        </div>
+    </section>
+    
     <section id="knowledge">
         <h1 class="header"><span>Habilidades</span></h1>
 
@@ -132,7 +156,7 @@
             </div>
             
         </div>
-    </section>
+    </section>  
 
     <footer id="footer">
         <div class="col-left">
